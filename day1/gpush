@@ -1,14 +1,20 @@
 #!/bin/bash
 
-## get latest
-git pull
+dir=$(find / -type d -name $1)
 
-## adding out files that we want to push
-git add .
+cd $dir; pwd
+ls
 
-## use $1 as our comment message
-git commit -m $1
+# ## get latest
+# cd ~ git pull
 
-## pushing our files to github
-git push -u origin 
+# ## adding out files that we want to push
+# git add $(pwd)
 
+# ## use $1 as our comment message
+git commit -m
+
+# ## pushing our files to github
+# git push -u origin main
+
+echo $(date)
