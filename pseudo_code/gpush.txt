@@ -1,18 +1,21 @@
 # Description:
-Every project we work on will be stored in
-our Github account. Everytime , we want to
-publish our source sode, we have a repeated
-block of code we want to speed up. So this
-script will help us do exactly that.
+ very project we work on will be stored in
+ our Github account. Everytime , we want to
+ publish our source sode, we have a repeated
+ block of code we want to speed up. So this
+ script will help us do exactly that.
 
 
 Step 1:
-Check if current directory is a git repository
-or not . 
+ Check if current directory is a git repository
+ or not . 
 if  [ if current DIR is a repository]; then
 publish your code to Github
 else
   give error message about the current DIR
+  ask the user for desire repository and save it variable
+  usering the variable change dir to the desired repository
+  publish files to github 
 fi
 
 

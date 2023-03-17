@@ -8,4 +8,15 @@ if [ -d .git ]; then
 else
   echo "error: not in git repository"
   echo "currently in: $PWD"
+  read -p "What repo are you looking for? : "repo-name
+  dir=$(find / -type d -name $repo_name)
+  if [ $? -ne 0 ]; then 
+     echo "repo $repo_name is not found"
+else
+  git pull
+  git add .
+  git commit -m "$1"
+  git push -u origin main
+  cd $dir
+  fi
 fi
