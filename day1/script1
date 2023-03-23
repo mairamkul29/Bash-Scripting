@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PS3="What is your favorite sport "
+select sport in Volleyball "Basketball" Football "Tennis" Golf; 
+do
+    case "$sport" in
+        Volleyball) echo "Volleyball first played in 1895, Holyoke, Massachusetts, United States" ;;
+        "Basketball" ) echo "Kansas was one of the first states to adopt it as a college sport";;
+        Football) echo "Football's modern origins began in England more than 100 years ago, in 1863.";;
+        "Tennis" ) echo "The modern form of tennis originated in Birmingham, England, in the late 19th century as lawn tennis.";;
+        Golf) echo "Since 1552, golf has been played at St. Andrews, Scotland.";;
+    esac
+    
+done
